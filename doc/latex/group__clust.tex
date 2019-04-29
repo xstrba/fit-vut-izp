@@ -1,0 +1,176 @@
+\hypertarget{group__clust}{}\section{Praca s jednotlivymi zhlukmi}
+\label{group__clust}\index{Praca s jednotlivymi zhlukmi@{Praca s jednotlivymi zhlukmi}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__clust_ga96db0862471d90abb3d80103ef3695f7}{init\+\_\+cluster} (struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$c, int cap)
+\item 
+void \hyperlink{group__clust_ga8289f092f205baeb13cf33cfffa15324}{clear\+\_\+cluster} (struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$c)
+\item 
+struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$ \hyperlink{group__clust_ga0d8702f8bee3bccb81380e012a615a3d}{resize\+\_\+cluster} (struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$c, int new\+\_\+cap)
+\item 
+void \hyperlink{group__clust_gab6269b64b2c7f4842a51c58b2d86a2e5}{append\+\_\+cluster} (struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$c, struct \hyperlink{structobj__t}{obj\+\_\+t} obj)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__clust_gafb09f2bf4615f5ac7a91807aa086d4c3}\label{group__clust_gafb09f2bf4615f5ac7a91807aa086d4c3}} 
+const int \hyperlink{group__clust_gafb09f2bf4615f5ac7a91807aa086d4c3}{C\+L\+U\+S\+T\+E\+R\+\_\+\+C\+H\+U\+NK}
+\begin{DoxyCompactList}\small\item\em Konstanta odporucana pre realokaciu pola objektov. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__clust_gaf73744f9128e4605127b40932a730a48}{remove\+\_\+cluster} (struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$carr, int narr, int idx)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__clust_ga12718af9e3e31b61bf703ec260e22450}{sort\+\_\+cluster} (struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$c)
+\item 
+void \hyperlink{group__clust_ga322bfd43ab7a3fa830cd69e79b7eef06}{print\+\_\+cluster} (struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$c)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__clust_gab6269b64b2c7f4842a51c58b2d86a2e5}\label{group__clust_gab6269b64b2c7f4842a51c58b2d86a2e5}} 
+\index{Praca s jednotlivymi zhlukmi@{Praca s jednotlivymi zhlukmi}!append\+\_\+cluster@{append\+\_\+cluster}}
+\index{append\+\_\+cluster@{append\+\_\+cluster}!Praca s jednotlivymi zhlukmi@{Praca s jednotlivymi zhlukmi}}
+\subsubsection{\texorpdfstring{append\+\_\+cluster()}{append\_cluster()}}
+{\footnotesize\ttfamily void append\+\_\+cluster (\begin{DoxyParamCaption}\item[{struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$}]{c,  }\item[{struct \hyperlink{structobj__t}{obj\+\_\+t}}]{obj }\end{DoxyParamCaption})}
+
+Pridava objekt \textquotesingle{}obj\textquotesingle{} na koniec zhluku \textquotesingle{}c\textquotesingle{}. Pokial sa objekt nezmesti do zhluku, tak zvacsi zhluk.
+
+\begin{DoxyPrecond}{Precondition}
+c != N\+U\+LL
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+\textquotesingle{}obj\textquotesingle{} bude na konci zhluku \textquotesingle{}c\textquotesingle{} a velkost tohto zhluku sa zvacsi o 1.
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em c} & zhluk, do ktoreh sa pridava objekt \\
+\hline
+{\em obj} & objet, ktory sa pridava na koniec zhluku \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__clust_ga8289f092f205baeb13cf33cfffa15324}\label{group__clust_ga8289f092f205baeb13cf33cfffa15324}} 
+\index{Praca s jednotlivymi zhlukmi@{Praca s jednotlivymi zhlukmi}!clear\+\_\+cluster@{clear\+\_\+cluster}}
+\index{clear\+\_\+cluster@{clear\+\_\+cluster}!Praca s jednotlivymi zhlukmi@{Praca s jednotlivymi zhlukmi}}
+\subsubsection{\texorpdfstring{clear\+\_\+cluster()}{clear\_cluster()}}
+{\footnotesize\ttfamily void clear\+\_\+cluster (\begin{DoxyParamCaption}\item[{struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$}]{c }\end{DoxyParamCaption})}
+
+Uvolni pamat alokovanu pre objekty v zhluku \textquotesingle{}c\textquotesingle{}. Inicializuje zhluk na nulovu kapacitu.
+
+\begin{DoxyPrecond}{Precondition}
+c != N\+U\+LL
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Pamat alokovana pre objekty v zhluku \textquotesingle{}c\textquotesingle{} bude uvolnena.
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em c} & zhluk pre vycistenie \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__clust_ga96db0862471d90abb3d80103ef3695f7}\label{group__clust_ga96db0862471d90abb3d80103ef3695f7}} 
+\index{Praca s jednotlivymi zhlukmi@{Praca s jednotlivymi zhlukmi}!init\+\_\+cluster@{init\+\_\+cluster}}
+\index{init\+\_\+cluster@{init\+\_\+cluster}!Praca s jednotlivymi zhlukmi@{Praca s jednotlivymi zhlukmi}}
+\subsubsection{\texorpdfstring{init\+\_\+cluster()}{init\_cluster()}}
+{\footnotesize\ttfamily void init\+\_\+cluster (\begin{DoxyParamCaption}\item[{struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$}]{c,  }\item[{int}]{cap }\end{DoxyParamCaption})}
+
+Inicializacia zhluku \textquotesingle{}c\textquotesingle{}. Allokuje pamat pre \textquotesingle{}cap\textquotesingle{} objektov. Ukazatel N\+U\+LL pri poli objektov znamena kapacitu 0.
+
+\begin{DoxyPrecond}{Precondition}
+\textquotesingle{}cap\textquotesingle{} $>$= 0
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Zhluk bude mat allokovanu pamat pre \textquotesingle{}cap\textquotesingle{} objektov. Velkost zhluku bude 0.
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em c} & zhuk urceny na inicializaciu \\
+\hline
+{\em cap} & capacita zhluku \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__clust_ga322bfd43ab7a3fa830cd69e79b7eef06}\label{group__clust_ga322bfd43ab7a3fa830cd69e79b7eef06}} 
+\index{Praca s jednotlivymi zhlukmi@{Praca s jednotlivymi zhlukmi}!print\+\_\+cluster@{print\+\_\+cluster}}
+\index{print\+\_\+cluster@{print\+\_\+cluster}!Praca s jednotlivymi zhlukmi@{Praca s jednotlivymi zhlukmi}}
+\subsubsection{\texorpdfstring{print\+\_\+cluster()}{print\_cluster()}}
+{\footnotesize\ttfamily void print\+\_\+cluster (\begin{DoxyParamCaption}\item[{struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$}]{c }\end{DoxyParamCaption})}
+
+Vytlaci zhluk, resp. jeho objekty na standardny vystup.
+
+\begin{DoxyPrecond}{Precondition}
+c != N\+U\+LL 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{group__clust_gaf73744f9128e4605127b40932a730a48}\label{group__clust_gaf73744f9128e4605127b40932a730a48}} 
+\index{Praca s jednotlivymi zhlukmi@{Praca s jednotlivymi zhlukmi}!remove\+\_\+cluster@{remove\+\_\+cluster}}
+\index{remove\+\_\+cluster@{remove\+\_\+cluster}!Praca s jednotlivymi zhlukmi@{Praca s jednotlivymi zhlukmi}}
+\subsubsection{\texorpdfstring{remove\+\_\+cluster()}{remove\_cluster()}}
+{\footnotesize\ttfamily int remove\+\_\+cluster (\begin{DoxyParamCaption}\item[{struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$}]{carr,  }\item[{int}]{narr,  }\item[{int}]{idx }\end{DoxyParamCaption})}
+
+Odstrani zhluk z pola zhlukov \textquotesingle{}carr\textquotesingle{}, ktore obsahuje \textquotesingle{}narr\textquotesingle{} poloziek. Zhluk lezi na indexe \textquotesingle{}idx\textquotesingle{}.
+
+\begin{DoxyPrecond}{Precondition}
+carr != N\+U\+LL narr $>$ 0 idx $<$ narr
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Polozka na indexe \textquotesingle{}idx\textquotesingle{} bude odstranena z pola. Vsetky polozky za indexom budu posunute o jeden index dolava. Pocet poloziek v \textquotesingle{}carr\textquotesingle{} bude o jeden mensi.
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em carr} & pole zhlukov \\
+\hline
+{\em narr} & pocet poloziek pola \\
+\hline
+{\em idx} & index zhluku, ktory sa odstrani\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+novy pocet zhlukov 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__clust_ga0d8702f8bee3bccb81380e012a615a3d}\label{group__clust_ga0d8702f8bee3bccb81380e012a615a3d}} 
+\index{Praca s jednotlivymi zhlukmi@{Praca s jednotlivymi zhlukmi}!resize\+\_\+cluster@{resize\+\_\+cluster}}
+\index{resize\+\_\+cluster@{resize\+\_\+cluster}!Praca s jednotlivymi zhlukmi@{Praca s jednotlivymi zhlukmi}}
+\subsubsection{\texorpdfstring{resize\+\_\+cluster()}{resize\_cluster()}}
+{\footnotesize\ttfamily struct \hyperlink{structcluster__t}{cluster\+\_\+t}$\ast$ resize\+\_\+cluster (\begin{DoxyParamCaption}\item[{struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$}]{c,  }\item[{int}]{new\+\_\+cap }\end{DoxyParamCaption})}
+
+Zmeni kapacitu zhluku \textquotesingle{}c\textquotesingle{} na \textquotesingle{}new\+\_\+cap\textquotesingle{} a realokuje pamat pre dany pocet objektov.
+
+\begin{DoxyPrecond}{Precondition}
+kapacita zhluku bude vacsia alebo rovna 0
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Kapacita zhluku bude rovna \textquotesingle{}new\+\_\+cap\textquotesingle{}, pokial nenastane chyba pri realokacii.
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em c} & zhluk urceny na realokaciu objektov \\
+\hline
+{\em new\+\_\+cap} & nova kapacita zhluku \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+novy zhluk, v pripade chyby N\+U\+LL 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__clust_ga12718af9e3e31b61bf703ec260e22450}\label{group__clust_ga12718af9e3e31b61bf703ec260e22450}} 
+\index{Praca s jednotlivymi zhlukmi@{Praca s jednotlivymi zhlukmi}!sort\+\_\+cluster@{sort\+\_\+cluster}}
+\index{sort\+\_\+cluster@{sort\+\_\+cluster}!Praca s jednotlivymi zhlukmi@{Praca s jednotlivymi zhlukmi}}
+\subsubsection{\texorpdfstring{sort\+\_\+cluster()}{sort\_cluster()}}
+{\footnotesize\ttfamily void sort\+\_\+cluster (\begin{DoxyParamCaption}\item[{struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$}]{c }\end{DoxyParamCaption})}
+
+Zoradi objekty v zhluku vzostupne podla ich indexov.
+
+\begin{DoxyPrecond}{Precondition}
+c != N\+U\+LL
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Objekty v zhluku budu zoradene vzostupne podla ich indexov. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em c} & zhluk, ktoreho objekty budu zoradene \\
+\hline
+\end{DoxyParams}

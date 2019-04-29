@@ -1,0 +1,149 @@
+\hypertarget{group__clusts}{}\section{Praca s viacerymi zhlukmi}
+\label{group__clusts}\index{Praca s viacerymi zhlukmi@{Praca s viacerymi zhlukmi}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__clusts_gac39a25fdec1f4952ec92ee5407893158}{merge\+\_\+clusters} (struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$c1, struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$c2)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{group__clusts_ga703ce6afddf65026b68645bc5394405b}{obj\+\_\+distance} (struct \hyperlink{structobj__t}{obj\+\_\+t} $\ast$o1, struct \hyperlink{structobj__t}{obj\+\_\+t} $\ast$o2)
+\item 
+float \hyperlink{group__clusts_gaf336f28a62c28da792f6def84f432bb2}{cluster\+\_\+distance} (struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$c1, struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$c2)
+\item 
+void \hyperlink{group__clusts_ga5f16d682e7c859f7bd3f27697c2b7cc0}{find\+\_\+neighbours} (struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$carr, int narr, int $\ast$c1, int $\ast$c2)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__clusts_ga9d928923d43120cb53ddff210a087061}{load\+\_\+clusters} (char $\ast$filename, struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$$\ast$arr)
+\item 
+void \hyperlink{group__clusts_gad350e6021e5fead00ff2eeec4d134525}{print\+\_\+clusters} (struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$carr, int narr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__clusts_gaf336f28a62c28da792f6def84f432bb2}\label{group__clusts_gaf336f28a62c28da792f6def84f432bb2}} 
+\index{Praca s viacerymi zhlukmi@{Praca s viacerymi zhlukmi}!cluster\+\_\+distance@{cluster\+\_\+distance}}
+\index{cluster\+\_\+distance@{cluster\+\_\+distance}!Praca s viacerymi zhlukmi@{Praca s viacerymi zhlukmi}}
+\subsubsection{\texorpdfstring{cluster\+\_\+distance()}{cluster\_distance()}}
+{\footnotesize\ttfamily float cluster\+\_\+distance (\begin{DoxyParamCaption}\item[{struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$}]{c1,  }\item[{struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$}]{c2 }\end{DoxyParamCaption})}
+
+Pomocou funkcie \textquotesingle{}obj\+\_\+distance\textquotesingle{} pocita vzdialenost dvoch zhlukov. Ich vzdialenost je rovna vzdialenosti najblizsich dvoch objektov jednotlivych zhlukov.
+
+\begin{DoxyPrecond}{Precondition}
+c1 != N\+U\+LL c2 != N\+U\+LL
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em c1} & zhluk \\
+\hline
+{\em c2} & zhluk \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vzdialenost zhlukov 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__clusts_ga5f16d682e7c859f7bd3f27697c2b7cc0}\label{group__clusts_ga5f16d682e7c859f7bd3f27697c2b7cc0}} 
+\index{Praca s viacerymi zhlukmi@{Praca s viacerymi zhlukmi}!find\+\_\+neighbours@{find\+\_\+neighbours}}
+\index{find\+\_\+neighbours@{find\+\_\+neighbours}!Praca s viacerymi zhlukmi@{Praca s viacerymi zhlukmi}}
+\subsubsection{\texorpdfstring{find\+\_\+neighbours()}{find\_neighbours()}}
+{\footnotesize\ttfamily void find\+\_\+neighbours (\begin{DoxyParamCaption}\item[{struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$}]{carr,  }\item[{int}]{narr,  }\item[{int $\ast$}]{c1,  }\item[{int $\ast$}]{c2 }\end{DoxyParamCaption})}
+
+Pomocou funkcie \textquotesingle{}cluster\+\_\+distance\textquotesingle{} hlada dva najblizsie zhluky v poli zhlukov \textquotesingle{}carr\textquotesingle{} o velkosti \textquotesingle{}narr\textquotesingle{}. Indexy najblizsich zhlukov uklada do pamate kam ukazuju \textquotesingle{}c1\textquotesingle{} a \textquotesingle{}c2\textquotesingle{}.
+
+\begin{DoxyPrecond}{Precondition}
+carr != N\+U\+LL narr $>$ 1 c1 != N\+U\+LL c2 != N\+U\+LL
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Hodnota v pamati, kam ukazuju \textquotesingle{}c1\textquotesingle{} a \textquotesingle{}c2\textquotesingle{} budu rovne indexom najdenych zhlukov. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{group__clusts_ga9d928923d43120cb53ddff210a087061}\label{group__clusts_ga9d928923d43120cb53ddff210a087061}} 
+\index{Praca s viacerymi zhlukmi@{Praca s viacerymi zhlukmi}!load\+\_\+clusters@{load\+\_\+clusters}}
+\index{load\+\_\+clusters@{load\+\_\+clusters}!Praca s viacerymi zhlukmi@{Praca s viacerymi zhlukmi}}
+\subsubsection{\texorpdfstring{load\+\_\+clusters()}{load\_clusters()}}
+{\footnotesize\ttfamily int load\+\_\+clusters (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename,  }\item[{struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$$\ast$}]{arr }\end{DoxyParamCaption})}
+
+Nacitava ojekty zo suboru \textquotesingle{}filename\textquotesingle{}, pre kazdy inicializuje zhluk, ktory pridava do pola, na ktore ukazuje \textquotesingle{}arr\textquotesingle{}. Alokuje miesto pre pole vsetkych shlukov a ukazatel na prvni polozku ulozi do pamati. V pripade chyby uklada do pamati N\+U\+LL.
+
+\begin{DoxyPrecond}{Precondition}
+Existuje subor pod nazvom \textquotesingle{}filename\textquotesingle{} a podarilo sa ho otvorit
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Bude alokovany priestor pre pocet zhlukov uvedeny v subore. Pre kazdy objekt v subore bude vytvoreny cluster a objekt bude do neho pridany. V pripade chyby bude \textquotesingle{}arr\textquotesingle{} ukazovat na N\+U\+LL. Subor bude zatvoreny.
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & meno suboru s objektmi. \\
+\hline
+{\em arr} & ukazatel na pole zhlukov, v pripade chyby na N\+U\+LL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pocet nacitanych objektov alebo v pripade chyby -\/1) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__clusts_gac39a25fdec1f4952ec92ee5407893158}\label{group__clusts_gac39a25fdec1f4952ec92ee5407893158}} 
+\index{Praca s viacerymi zhlukmi@{Praca s viacerymi zhlukmi}!merge\+\_\+clusters@{merge\+\_\+clusters}}
+\index{merge\+\_\+clusters@{merge\+\_\+clusters}!Praca s viacerymi zhlukmi@{Praca s viacerymi zhlukmi}}
+\subsubsection{\texorpdfstring{merge\+\_\+clusters()}{merge\_clusters()}}
+{\footnotesize\ttfamily void merge\+\_\+clusters (\begin{DoxyParamCaption}\item[{struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$}]{c1,  }\item[{struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$}]{c2 }\end{DoxyParamCaption})}
+
+Spoji dva zhluky. Zkopiruje objekty zo zhluku \textquotesingle{}c2\textquotesingle{} do zhluku \textquotesingle{}c1\textquotesingle{}. Zhluk \textquotesingle{}c2\textquotesingle{} zostava nezmeneny.
+
+\begin{DoxyPrecond}{Precondition}
+c1 != N\+U\+LL c2 != N\+U\+LL
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Velkost zhluku \textquotesingle{}c1\textquotesingle{} sa zvacsi o velkost zhluku \textquotesingle{}c2\textquotesingle{} a objekty zhluku \textquotesingle{}c2\textquotesingle{} budu priradene na koniec zhluku \textquotesingle{}c1\textquotesingle{}. Zhluk \textquotesingle{}c2\textquotesingle{} je nezeneny.
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em c1} & zhluk, do ktoreho sa kopiruju objekty \\
+\hline
+{\em c2} & zhluk, z ktoreho sa kopiruju objekty \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__clusts_ga703ce6afddf65026b68645bc5394405b}\label{group__clusts_ga703ce6afddf65026b68645bc5394405b}} 
+\index{Praca s viacerymi zhlukmi@{Praca s viacerymi zhlukmi}!obj\+\_\+distance@{obj\+\_\+distance}}
+\index{obj\+\_\+distance@{obj\+\_\+distance}!Praca s viacerymi zhlukmi@{Praca s viacerymi zhlukmi}}
+\subsubsection{\texorpdfstring{obj\+\_\+distance()}{obj\_distance()}}
+{\footnotesize\ttfamily float obj\+\_\+distance (\begin{DoxyParamCaption}\item[{struct \hyperlink{structobj__t}{obj\+\_\+t} $\ast$}]{o1,  }\item[{struct \hyperlink{structobj__t}{obj\+\_\+t} $\ast$}]{o2 }\end{DoxyParamCaption})}
+
+Pocita euklidovsku vzdialenost dvoch objektov.
+
+\begin{DoxyPrecond}{Precondition}
+o1 != N\+U\+LL o2 != N\+U\+LL
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em o1} & objekt \\
+\hline
+{\em o2} & objekt \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vzdialenost dvoch objektov 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__clusts_gad350e6021e5fead00ff2eeec4d134525}\label{group__clusts_gad350e6021e5fead00ff2eeec4d134525}} 
+\index{Praca s viacerymi zhlukmi@{Praca s viacerymi zhlukmi}!print\+\_\+clusters@{print\+\_\+clusters}}
+\index{print\+\_\+clusters@{print\+\_\+clusters}!Praca s viacerymi zhlukmi@{Praca s viacerymi zhlukmi}}
+\subsubsection{\texorpdfstring{print\+\_\+clusters()}{print\_clusters()}}
+{\footnotesize\ttfamily void print\+\_\+clusters (\begin{DoxyParamCaption}\item[{struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$}]{carr,  }\item[{int}]{narr }\end{DoxyParamCaption})}
+
+Tlaci pole zhlukov na standardny vystup.
+
+\begin{DoxyPrecond}{Precondition}
+carr != N\+U\+LL narr $>$ 0
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Zhluky budu vypisane na stdout
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em carr} & pole zhlukov \\
+\hline
+{\em narr} & velkost pola \\
+\hline
+\end{DoxyParams}

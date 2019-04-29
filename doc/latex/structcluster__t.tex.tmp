@@ -1,0 +1,53 @@
+\hypertarget{structcluster__t}{}\section{cluster\+\_\+t Struct Reference}
+\label{structcluster__t}\index{cluster\+\_\+t@{cluster\+\_\+t}}
+
+
+Struktura zhluku obsahujuca objekty.  
+
+
+
+
+{\ttfamily \#include $<$proj3.\+h$>$}
+
+
+
+Collaboration diagram for cluster\+\_\+t\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{structcluster__t_ae1463905fc36c25032381b8e49359823}{size}
+\item 
+int \hyperlink{structcluster__t_acee92791a353de443b8a93e1a68e721f}{capacity}
+\item 
+struct \hyperlink{structobj__t}{obj\+\_\+t} $\ast$ \hyperlink{structcluster__t_a30eaceafae29d1a5b6f0fca36562c473}{obj}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Struktura zhluku obsahujuca objekty. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structcluster__t_acee92791a353de443b8a93e1a68e721f}\label{structcluster__t_acee92791a353de443b8a93e1a68e721f}} 
+\index{cluster\+\_\+t@{cluster\+\_\+t}!capacity@{capacity}}
+\index{capacity@{capacity}!cluster\+\_\+t@{cluster\+\_\+t}}
+\subsubsection{\texorpdfstring{capacity}{capacity}}
+{\footnotesize\ttfamily int cluster\+\_\+t\+::capacity}
+
+Kapacita zhluku \mbox{\Hypertarget{structcluster__t_a30eaceafae29d1a5b6f0fca36562c473}\label{structcluster__t_a30eaceafae29d1a5b6f0fca36562c473}} 
+\index{cluster\+\_\+t@{cluster\+\_\+t}!obj@{obj}}
+\index{obj@{obj}!cluster\+\_\+t@{cluster\+\_\+t}}
+\subsubsection{\texorpdfstring{obj}{obj}}
+{\footnotesize\ttfamily struct \hyperlink{structobj__t}{obj\+\_\+t}$\ast$ cluster\+\_\+t\+::obj}
+
+pole objektov daneho zhluku \mbox{\Hypertarget{structcluster__t_ae1463905fc36c25032381b8e49359823}\label{structcluster__t_ae1463905fc36c25032381b8e49359823}} 
+\index{cluster\+\_\+t@{cluster\+\_\+t}!size@{size}}
+\index{size@{size}!cluster\+\_\+t@{cluster\+\_\+t}}
+\subsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily int cluster\+\_\+t\+::size}
+
+Velkost zhluku, t.\+j. pocet objektov 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{proj3_8h}{proj3.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,73 @@
+\hypertarget{proj3_8h}{}\section{proj3.\+h File Reference}
+\label{proj3_8h}\index{proj3.\+h@{proj3.\+h}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structobj__t}{obj\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Struktura objektu obsahujuca suradnice. \end{DoxyCompactList}\item 
+struct \hyperlink{structcluster__t}{cluster\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Struktura zhluku obsahujuca objekty. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__clust_ga96db0862471d90abb3d80103ef3695f7}{init\+\_\+cluster} (struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$c, int cap)
+\item 
+void \hyperlink{group__clust_ga8289f092f205baeb13cf33cfffa15324}{clear\+\_\+cluster} (struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$c)
+\item 
+struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$ \hyperlink{group__clust_ga0d8702f8bee3bccb81380e012a615a3d}{resize\+\_\+cluster} (struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$c, int new\+\_\+cap)
+\item 
+void \hyperlink{group__clust_gab6269b64b2c7f4842a51c58b2d86a2e5}{append\+\_\+cluster} (struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$c, struct \hyperlink{structobj__t}{obj\+\_\+t} obj)
+\item 
+void \hyperlink{group__clusts_gac39a25fdec1f4952ec92ee5407893158}{merge\+\_\+clusters} (struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$c1, struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$c2)
+\end{DoxyCompactItemize}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__clust_gaf73744f9128e4605127b40932a730a48}{remove\+\_\+cluster} (struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$carr, int narr, int idx)
+\end{DoxyCompactItemize}
+
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{group__clusts_ga703ce6afddf65026b68645bc5394405b}{obj\+\_\+distance} (struct \hyperlink{structobj__t}{obj\+\_\+t} $\ast$o1, struct \hyperlink{structobj__t}{obj\+\_\+t} $\ast$o2)
+\item 
+float \hyperlink{group__clusts_gaf336f28a62c28da792f6def84f432bb2}{cluster\+\_\+distance} (struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$c1, struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$c2)
+\item 
+void \hyperlink{group__clusts_ga5f16d682e7c859f7bd3f27697c2b7cc0}{find\+\_\+neighbours} (struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$carr, int narr, int $\ast$c1, int $\ast$c2)
+\end{DoxyCompactItemize}
+
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__clust_ga12718af9e3e31b61bf703ec260e22450}{sort\+\_\+cluster} (struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$c)
+\item 
+void \hyperlink{group__clust_ga322bfd43ab7a3fa830cd69e79b7eef06}{print\+\_\+cluster} (struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$c)
+\end{DoxyCompactItemize}
+
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__clusts_ga9d928923d43120cb53ddff210a087061}{load\+\_\+clusters} (char $\ast$filename, struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$$\ast$arr)
+\item 
+void \hyperlink{group__clusts_gad350e6021e5fead00ff2eeec4d134525}{print\+\_\+clusters} (struct \hyperlink{structcluster__t}{cluster\+\_\+t} $\ast$carr, int narr)
+\end{DoxyCompactItemize}
+
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{group__clust_gafb09f2bf4615f5ac7a91807aa086d4c3}{C\+L\+U\+S\+T\+E\+R\+\_\+\+C\+H\+U\+NK}
+\begin{DoxyCompactList}\small\item\em Konstanta odporucana pre realokaciu pola objektov. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Program sa spusta v tvare\+:~\newline
+ ./proj3 objekty \mbox{[}N\mbox{]}~\newline
+ objekty -\/$>$ subor s objektami~\newline
+ N -\/$>$ pocet zhlukov (volitelny parameter)~\newline
+ N je implicitne nastavene na 1.~\newline
+~\newline
+ Vzorovy tvar suboru\+:~\newline
+ count=N(musi byt v danom tvare a N -\/$>$ pocet objektov v subore)~\newline
+ 1 20 2~\newline
+ 2 30 4~\newline
+ 
